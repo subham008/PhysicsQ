@@ -15,15 +15,17 @@ import java.awt.*;
 public class App  extends JFrame{
 
     public App() {
+        int windowHeight=700;
+        int windowWidth=900;
         setTitle("PhysicsQ");
-        setSize(800, 600);
+        setSize(windowWidth , windowHeight);
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBackground(Color.BLACK);
 
-       Particle particles[]=createParticles(4, 4);
+       Particle particles[]=createParticles(11, 9);
 
-       Movement movement=new Movement();
+       Movement movement=new Movement(windowWidth, windowHeight);
        for(Particle particle:particles)
            movement.addParticle(particle);
 
@@ -72,12 +74,12 @@ public class App  extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 // Display popup dialog to edit delay
                 
-                String input = JOptionPane.showInputDialog(this, "Enter new delay (milliseconds):");
+                String input = JOptionPane.showInputDialog(this, animation.delay);
                 try {
                     int delay = Integer.parseInt(input);
                     animation.changeDelay(delay);
                 } catch (NumberFormatException ex) {
-                    //JOptionPane.showMessageDialog(this, "Invalid input. Please enter a valid number.");
+                    JOptionPane.showMessageDialog(changeDelayButton, "Invalid input. Please enter a valid number.");
                 }
             }
         });
@@ -104,8 +106,7 @@ public class App  extends JFrame{
             }
         }
 
-        particles[12].setMass(20);
-        particles[12].setVelocity(-5,-5);
+       
         return particles;
     }
 

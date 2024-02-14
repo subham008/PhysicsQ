@@ -5,9 +5,11 @@ import java.util.List;
 
 class Movement {
     private List<Particle> particles;
-
-    public Movement() {
+    int windowHeight,windowWidth;
+    public Movement(int w, int h) {
         particles = new ArrayList<>();
+        this.windowHeight=h;
+        this.windowWidth=w;
     }
 
     // Method to add a particle to the movement system
@@ -28,8 +30,7 @@ class Movement {
     }
 
     public void moveParticles() {
-        int windowWidth = 800; // Width of the window
-        int windowHeight = 600; // Height of the window
+       
     
         for (Particle particle : particles) {
             int newX = particle.getX() + particle.getXVelocity();

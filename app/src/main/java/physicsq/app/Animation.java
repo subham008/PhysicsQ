@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 class Animation implements ActionListener {
     private Movement movement;
     private Timer timer;
-    int delay=500;
+    int delay=100;
 
     public Animation(Movement movement) {
         this.movement = movement;
