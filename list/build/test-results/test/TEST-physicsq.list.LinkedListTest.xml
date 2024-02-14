@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="physicsq.list.LinkedListTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-02-13T10:17:50" hostname="DESKTOP-917T36I" time="0.057">
+  <properties/>
+  <testcase name="testAdd()" classname="physicsq.list.LinkedListTest" time="0.036"/>
+  <testcase name="testRemoveMissing()" classname="physicsq.list.LinkedListTest" time="0.002"/>
+  <testcase name="testRemove()" classname="physicsq.list.LinkedListTest" time="0.002"/>
+  <testcase name="testConstructor()" classname="physicsq.list.LinkedListTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
